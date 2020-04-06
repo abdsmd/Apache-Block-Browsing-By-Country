@@ -63,3 +63,4 @@ Deny from All
 
 EOF
 
+service httpd restart
