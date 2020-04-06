@@ -1,8 +1,5 @@
 # Update The Repo for CentOS 5 (32bit) US Server
-
-> /etc/yum.repos.d/CentOS-Base.repo
-nano /etc/yum.repos.d/CentOS-Base.repo
-
+# nano /etc/yum.repos.d/CentOS-Base.repo
 [base]
 name=CentOS-$releasever - Base
 baseurl=http://vault.centos.org/5.11/os/$basearch/
