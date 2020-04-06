@@ -1,5 +1,5 @@
 
-wget -O /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/abdsmd/Apache-Block-Browsing-By-Country/master/CentOS-Base.repo
+wget -O /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/abdsmd/Apache-Block-Browsing-By-Country/master/CentOS-Base.repo   --no-check-certificate  
 yum update -y
 yum install -y epel-release
 yum install -y GeoIP GeoIP-GeoLite-data geoipupdate mod_geoip
