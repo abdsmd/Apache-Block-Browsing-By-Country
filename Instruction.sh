@@ -1,4 +1,4 @@
-# Update The Old Repo for US Server
+# Update The Repo for CentOS 5 (32bit) US Server
 
 > /etc/yum.repos.d/CentOS-Base.repo
 nano /etc/yum.repos.d/CentOS-Base.repo
