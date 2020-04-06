@@ -1,46 +1,6 @@
-# Update The Repo for CentOS 5 (32bit) US Server
 
-> /etc/yum.repos.d/CentOS-Base.repo
-nano /etc/yum.repos.d/CentOS-Base.repo
-
-[base]
-name=CentOS-$releasever - Base
-baseurl=http://vault.centos.org/5.11/os/$basearch/
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
-
-[updates]
-name=CentOS-$releasever - Updates
-baseurl=http://vault.centos.org/5.11/os/$basearch/
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
-
-
-[extras]
-name=CentOS-$releasever - Extras
-baseurl=http://vault.centos.org/5.11/os/$basearch/
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
-
-
-[centosplus]
-name=CentOS-$releasever - Plus
-baseurl=http://vault.centos.org/5.11/os/$basearch/
-gpgcheck=1
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
-
-
-[contrib]
-name=CentOS-$releasever - Contrib
-baseurl=http://vault.centos.org/5.11/os/$basearch/
-gpgcheck=1
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
-
-`````````````````````````````````````````````````````````````````````````
-
-
+wget -O /etc/yum.repos.d/CentOS-Base.repo https://raw.githubusercontent.com/abdsmd/Apache-Block-Browsing-By-Country/master/CentOS-Base.repo
+yum update -y
 yum install -y epel-release
 yum install -y GeoIP GeoIP-GeoLite-data geoipupdate mod_geoip
 
@@ -50,7 +10,6 @@ LoadModule geoip_module modules/mod_geoip.so
 <IfModule mod_geoip.c>
   GeoIPEnable On
   GeoIPDBFile /usr/share/GeoIP/GeoIP.dat
-
 
 <Location />
 SetEnvIf GEOIP_COUNTRY_CODE BD AllowCountry
